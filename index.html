@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="fontawesome-free-5.15.2-web/css/all.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,600;0,700;0,900;1,100;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="dragula.css" rel="stylesheet" type="text/css">
+    <title>TODO List</title>
+</head>
+<body>
+    <h1><span class="title">TODO</span>Together</h1>
+    <div class="input_div">
+        <div class = "input_section">
+            <input class="input" type="text" placeholder="Add a task...">
+            <select name="timeSelector" id="timeSelector">
+                <option value="1-2hr">1-2hr</option>
+                <option value="3-5hr">3-5hr</option>
+                <option value="+5hr">+5hr</option>
+            </select>
+            <select name="taskSelector" id="taskSelector">
+                <option value="personalTasks">Personal</option>
+                <option value="teamTasks">Team</option>
+                <option value="openTasks">Open</option>
+            </select>
+        </div>
+        <button class="addButton"><i class="fas fa-plus"></i></button>
+    </div>
+    <div class="row">
+        <div class="wrapper">
+            <h2><span style="color:dodgerblue;">PERSONAL</span></h2>
+            <div class="container" id="personalTasks">
+                <!--<div class="item">
+                    <input type="text" class="item_input" disabled>
+                    <button class="editButton">EDIT</button>
+                    <button class="removeButton">Remove</button>
+                </div>-->
+            </div>
+        </div>
+        <div class="wrapper">
+            <h2>TEAM</h2>
+            <div class="container" id="teamTasks">
+            </div>
+        </div>
+        <div class="wrapper">
+            <h2>OPEN</h2>
+            <div class="container" id="openTasks">
+            </div>
+        </div>
+    </div>
+    <div class="help">
+        <button onclick="myFunction()" class="helpButton"><i class="far fa-question-circle"></i></button>
+        <script>
+            function myFunction() {
+                alert("Welcome to TODOTogether! Please use the personal list for your private tasks, the team list you want team members to see, and use the open list to take on tasks or let others know of one!");
+            }
+        </script>
+    </div>
+<script type="text/javascript" src="dragula.js"></script>
+<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
